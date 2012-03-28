@@ -36,9 +36,9 @@ else
     action :install
   end
 
-  extra_packages = case node[:platform]
+  extra_packages = case node['platform']
                    when "ubuntu"
-                     if node[:platform_version].to_f < 8.04
+                     if node['platform_version'].to_f < 8.04
                        %w{subversion-tools libsvn-core-perl}
                      else
                        %w{subversion-tools libsvn-perl}
