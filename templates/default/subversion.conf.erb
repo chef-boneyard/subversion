@@ -1,14 +1,14 @@
 <Location /svn>
 
-  DAV svn
+  DAV <%= node['subversion']['server_name'] %>
 
-  SVNPath /srv/svn/repo
+  SVNPath <%= "#{node['subversion']['repo_dir']}/#{node['subversion']['repo_name']}" %>
 
   AuthType Basic
 
   AuthName "Subversion repository"
 
-  AuthUserFile /srv/svn/htpasswd
+  AuthUserFile <%= "#{node['subversion']['repo_dir']}/htpasswd" %>
 
   Require valid-user
 
