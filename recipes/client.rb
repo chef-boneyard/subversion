@@ -43,7 +43,7 @@ else
                      else
                        %w{subversion-tools libsvn-perl}
                      end
-                   when "amazon","centos","scientific","redhat","fedora"
+                   when "amazon","centos","scientific","redhat","fedora","suse"
                      %w{subversion-devel subversion-perl}
                    else
                      %w{subversion-tools libsvn-perl}
