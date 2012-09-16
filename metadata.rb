@@ -2,7 +2,7 @@ maintainer        "Opscode, Inc."
 maintainer_email  "cookbooks@opscode.com"
 license           "Apache 2.0"
 description       "Installs subversion"
-version           "1.0.0"
+version           "1.0.1"
 
 %w{ redhat centos fedora ubuntu debian windows }.each do |os|
   supports os

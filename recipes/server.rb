@@ -20,27 +20,27 @@
 include_recipe "apache2::mod_dav_svn"
 include_recipe "subversion::client"
 
-directory node[:subversion][:repo_dir] do
+directory node['subversion']['repo_dir'] do
   recursive true
-  owner node[:apache][:user]
-  group node[:apache][:user]
+  owner node['apache']['user']
+  group node['apache']['user']
   mode "0755"
 end
 
 web_app "subversion" do
   template "subversion.conf.erb"
-  server_name "#{node[:subversion][:server_name]}.#{node[:domain]}"
+  server_name "#{node['subversion']['server_name']}.#{node['domain']}"
   notifies :restart, resources(:service => "apache2")
 end
 
 execute "svnadmin create repo" do
-  command "svnadmin create #{node[:subversion][:repo_dir]}/#{node[:subversion][:repo_name]}"
-  creates "#{node[:subversion][:repo_dir]}/#{node[:subversion][:repo_name]}"
-  user node[:apache][:user]
-  group node[:apache][:user]
+  command "svnadmin create #{node['subversion']['repo_dir']}/#{node['subversion']['repo_name']}"
+  creates "#{node['subversion']['repo_dir']}/#{node['subversion']['repo_name']}"
+  user node['apache']['user']
+  group node['apache']['user']
 end
 
 execute "create htpasswd file" do
-  command "htpasswd -scb #{node[:subversion][:repo_dir]}/htpasswd #{node[:subversion][:user]} #{node[:subversion][:password]}"
-  creates "#{node[:subversion][:repo_name]}/htpasswd"
+  command "htpasswd -scb #{node['subversion']['repo_dir']}/htpasswd #{node['subversion']['user']} #{node['subversion']['password']}"
+  creates "#{node['subversion']['repo_name']}/htpasswd"
 end
