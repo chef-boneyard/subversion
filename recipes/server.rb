@@ -23,7 +23,7 @@ include_recipe "subversion::client"
 directory node[:subversion][:repo_dir] do
   recursive true
   owner node[:apache][:user]
-  group node[:apache][:user]
+  group node[:apache][:group]
   mode "0755"
 end
 
@@ -34,11 +34,12 @@ web_app "subversion" do
 end
 
 execute "svnadmin create repo" do
-  command "svnadmin create #{node[:subversion][:repo_dir]}/#{node[:subversion][:repo_name]}"
-  creates "#{node[:subversion][:repo_dir]}/#{node[:subversion][:repo_name]}"
+  cwd node[:subversion][:repo_dir]
+  command "svnadmin create #{node[:subversion][:repo_name]} --config-dir /home/vagrant/.subversion"
+  creates "#{node[:subversion][:repo_name]}"
   user node[:apache][:user]
-  group node[:apache][:user]
-end
+  group node[:apache][:group]
+end if node[:subversion][:create_repo]
 
 execute "create htpasswd file" do
   command "htpasswd -scb #{node[:subversion][:repo_dir]}/htpasswd #{node[:subversion][:user]} #{node[:subversion][:password]}"
