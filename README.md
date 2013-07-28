@@ -6,6 +6,8 @@ Installs subversion for clients or sets up a server under Apache HTTPD.
 Requirements
 ============
 
+Requires Chef version 0.10.10+ and Ohai 0.6.12, due to use of `platform_family`.
+
 ## Platforms:
 
 * Debian/Ubuntu
@@ -17,10 +19,6 @@ Requirements
 
 * apache2
 * windows
-
-## Chef:
-
-Version >= 10.10
 
 Attributes
 ==========
