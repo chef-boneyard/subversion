@@ -18,6 +18,10 @@ Requirements
 * apache2
 * windows
 
+## Chef:
+
+Version >= 10.10
+
 Attributes
 ==========
 
