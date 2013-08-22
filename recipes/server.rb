@@ -34,7 +34,7 @@ web_app "subversion" do
 end
 
 execute "svnadmin create repo" do
-  command "svnadmin create #{node['subversion']['repo_dir']}/#{node['subversion']['repo_name']}"
+  command "svnadmin create --config-dir=/home/#{node['apache']['user']}/.subversion #{node['subversion']['repo_dir']}/#{node['subversion']['repo_name']}"
   creates "#{node['subversion']['repo_dir']}/#{node['subversion']['repo_name']}"
   user node['apache']['user']
   group node['apache']['user']
