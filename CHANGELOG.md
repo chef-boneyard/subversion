@@ -3,6 +3,11 @@ subversion Cookbook CHANGELOG
 This file is used to list changes made in each version of the subversion cookbook.
 
 
+v1.0.4
+------
+### Improvement
+- **[COOK-3061](https://tickets.opscode.com/browse/COOK-3061)** - Clean up case platform
+
 v1.0.2
 ------
 - Resolves foodcritic warnings
