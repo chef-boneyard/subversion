@@ -1,12 +1,17 @@
-## v1.0.2:
+subversion Cookbook CHANGELOG
+=============================
+This file is used to list changes made in each version of the subversion cookbook.
 
-* Resolves foodcritic warnings
-* [COOK-1513] - support SUSE SLES
 
-## v1.0.0:
+v1.0.2
+------
+- Resolves foodcritic warnings
+- [COOK-1513] - support SUSE SLES
 
-* [COOK-810] - add Windows platform support
+v1.0.0
+------
+- [COOK-810] - add Windows platform support
 
-## v0.8.3:
-
-* Current public release
+v0.8.3
+------
+- Current public release
