@@ -29,6 +29,7 @@ See `attributes/default.rb` for default values. The attributes are used in the s
 * `node['subversion']['server_name']` - server name used in the svn vhost.
 * `node['subversion']['user']` - user to log into the svn vhost.
 * `node['subversion']['password']` - htpasswd for the subversion user in the server recipe. This should be overridden as the default is not secure.
+* `node['subversion']['list_parent_path']` - a choice of "on" or "off".  When set to "on" the list of repositories in the `node['subversion']['repo_dir']` will be indexed at http://<server_name>/svn.  Default is "off"
 
 
 Recipes
