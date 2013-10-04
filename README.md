@@ -1,5 +1,7 @@
 subversion Cookbook
 ===================
+[![Build Status](https://secure.travis-ci.org/opscode-cookbooks/subversion.png?branch=master)](http://travis-ci.org/opscode-cookbooks/subversion)
+
 Installs subversion for clients or sets up a server under Apache HTTPD.
 
 
