@@ -22,6 +22,7 @@ default['subversion']['repo_name'] = 'repo'
 default['subversion']['server_name'] = 'svn'
 default['subversion']['user'] = 'subversion'
 default['subversion']['password'] = 'subversion'
+default['subversion']['list_parent_path'] = 'off'
 
 # For Windows
 default['subversion']['msi_source'] = "http://downloads.sourceforge.net/project/win32svn/1.7.0/Setup-Subversion-1.7.0.msi"
