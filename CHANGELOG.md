@@ -3,6 +3,12 @@ subversion Cookbook CHANGELOG
 This file is used to list changes made in each version of the subversion cookbook.
 
 
+v1.1.0
+------
+### Improvement
+- **[COOK-3692](https://tickets.opscode.com/browse/COOK-3692)** - Use SVNParentPath for Server and expose SVNListParentPath as attribute
+
+
 v1.0.4
 ------
 ### Improvement
