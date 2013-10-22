@@ -19,6 +19,7 @@
 # limitations under the License.
 #
 
+include_recipe 'apache2::mod_dav'
 include_recipe 'apache2::mod_dav_svn'
 include_recipe 'subversion::client'
 
