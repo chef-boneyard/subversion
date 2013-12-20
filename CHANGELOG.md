@@ -3,6 +3,12 @@ subversion Cookbook CHANGELOG
 This file is used to list changes made in each version of the subversion cookbook.
 
 
+v1.1.2
+------
+### Improvement
+- **[COOK-3868](https://tickets.opscode.com/browse/COOK-3868)** - add mod_dav to subversion cookbooks
+
+
 v1.1.0
 ------
 ### Improvement
