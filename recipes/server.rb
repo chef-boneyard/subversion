@@ -43,6 +43,7 @@ execute 'svnadmin create repo' do
   group   node['apache']['user']
 end
 
+package 'apache2-utils' if platform_family?('debian', 'suse') && node['apache']['version'] == '2.4'
 execute 'create htpasswd file' do
   command "htpasswd -scb #{node['subversion']['repo_dir']}/htpasswd #{node['subversion']['user']} #{node['subversion']['password']}"
   creates "#{node['subversion']['repo_name']}/htpasswd"
