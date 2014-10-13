@@ -1,6 +1,6 @@
 require 'serverspec'
-include Serverspec::Helper::Exec
-include Serverspec::Helper::DetectOS
+
+set :backend, :exec
 
 describe 'subversion::server' do
   describe port(80) do
