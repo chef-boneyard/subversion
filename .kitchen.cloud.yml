@@ -38,14 +38,6 @@ platforms:
     ssh_key_ids: <%= ENV['DIGITAL_OCEAN_SSH_KEY_IDS'] %>
     ssh_key: <%= ENV['DIGITAL_OCEAN_SSH_KEY_PATH'] %>
 
-- name: amazon-2013.09
-  driver_plugin: ec2
-  driver_config:
-    image_id: ami-e9a18d80
-    username: ec2-user
-    ssh_key: <%= ENV['EC2_SSH_KEY_PATH'] %>
-    flavor_id: t2.small
-
 - name: amazon-2014.03
   driver_plugin: ec2
   driver_config:
@@ -53,30 +45,6 @@ platforms:
     username: ec2-user
     ssh_key: <%= ENV['EC2_SSH_KEY_PATH'] %>
     flavor_id: t2.small
-
-- name: amazon-2014.09
-  driver_plugin: ec2
-  driver_config:
-    image_id: ami-fccc6d94
-    username: ec2-user
-    ssh_key: <%= ENV['EC2_SSH_KEY_PATH'] %>
-    flavor_id: t2.small
-
-- name: suse-11.3
-  driver_plugin: ec2
-  driver_config:
-    image_id: ami-96b117fe
-    username: root
-    ssh_key: <%= ENV['EC2_SSH_KEY_PATH'] %>
-    flavor_id: t2.small
-
-# UTF-8 is not a friend
-#- name: fedora-19
-#  driver_plugin: digital_ocean
-#  driver_config:
-#    size: 1gb
-#    image: fedora-19-x64
-#    region: <%= ENV['DIGITAL_OCEAN_REGION'] %>
 
 - name: fedora-20
   driver_plugin: digital_ocean
