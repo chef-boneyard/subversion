@@ -2,6 +2,10 @@ subversion Cookbook CHANGELOG
 =============================
 This file is used to list changes made in each version of the subversion cookbook.
 
+v1.3.0
+------
+- Updating test harness
+- Upgrading to Apache2 2.0.x series to support Ubuntu 14.04
 
 v1.1.2
 ------

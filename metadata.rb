@@ -3,7 +3,7 @@ maintainer        'Opscode, Inc.'
 maintainer_email  'cookbooks@opscode.com'
 license           'Apache 2.0'
 description       'Installs subversion'
-version           '1.2.0'
+version           '1.3.0'
 
 supports 'centos'
 supports 'debian'
