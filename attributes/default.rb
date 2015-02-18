@@ -3,7 +3,7 @@
 # Attributes:: server
 #
 # Copyright 2009, Daniel DeLeo
-# Copyright 2013, Opscode
+# Copyright 2013, Chef
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.

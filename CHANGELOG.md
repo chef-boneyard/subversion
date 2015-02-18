@@ -10,19 +10,19 @@ v1.3.0
 v1.1.2
 ------
 ### Improvement
-- **[COOK-3868](https://tickets.opscode.com/browse/COOK-3868)** - add mod_dav to subversion cookbooks
+- **[COOK-3868](https://tickets.chef.io/browse/COOK-3868)** - add mod_dav to subversion cookbooks
 
 
 v1.1.0
 ------
 ### Improvement
-- **[COOK-3692](https://tickets.opscode.com/browse/COOK-3692)** - Use SVNParentPath for Server and expose SVNListParentPath as attribute
+- **[COOK-3692](https://tickets.chef.io/browse/COOK-3692)** - Use SVNParentPath for Server and expose SVNListParentPath as attribute
 
 
 v1.0.4
 ------
 ### Improvement
-- **[COOK-3061](https://tickets.opscode.com/browse/COOK-3061)** - Clean up case platform
+- **[COOK-3061](https://tickets.chef.io/browse/COOK-3061)** - Clean up case platform
 
 v1.0.2
 ------
