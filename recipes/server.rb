@@ -49,3 +49,10 @@ execute 'create htpasswd file' do
   command "htpasswd -scb #{node['subversion']['repo_dir']}/htpasswd #{node['subversion']['user']} #{node['subversion']['password']}"
   creates "#{node['subversion']['repo_name']}/htpasswd"
 end
+
+cookbook_file "svn_access" do
+  path "#{node['subversion']['repo_dir']}/svn_access"
+  action :create_if_missing
+  owner node['apache']['user']
+  group node['apache']['user']
+end

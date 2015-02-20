@@ -1,0 +1,9 @@
+[groups]
+svnadmins = subversion
+
+[/]
+@svnadmins = rw
+* = r
+
+#[/project/trunk]
+#* = 

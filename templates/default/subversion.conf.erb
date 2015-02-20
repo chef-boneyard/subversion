@@ -6,6 +6,8 @@
 
   SVNListParentPath <%= node['subversion']['list_parent_path'] %>
 
+  AuthzSVNAccessFile <%= node['subversion']['repo_dir'] %>/svn_access
+
   AuthType Basic
 
   AuthName "Subversion repository"
