@@ -3,7 +3,7 @@ maintainer        'Chef Software, Inc.'
 maintainer_email  'cookbooks@chef.io'
 license           'Apache 2.0'
 description       'Installs subversion'
-version           '1.3.0'
+version           '1.3.1'
 
 supports 'centos'
 supports 'debian'
@@ -13,7 +13,7 @@ supports 'suse'
 supports 'ubuntu'
 supports 'windows'
 
-depends 'apache2', '~> 2.0.0'
+depends 'apache2', '>= 2.0.0'
 depends 'windows', '~> 1.10'
 
 recipe 'subversion', 'Includes the client recipe.'
