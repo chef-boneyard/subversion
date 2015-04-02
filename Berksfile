@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
-#^syntax detection
+# ^syntax detection
 
-source "https://supermarket.chef.io"
+source 'https://supermarket.chef.io'
 
 metadata
 
