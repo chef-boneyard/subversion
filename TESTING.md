@@ -8,7 +8,7 @@ This cookbook uses a variety of testing components:
 
 Prerequisites
 -------------
-To develop on this cookbook, you must have a sane Ruby 1.9+ environment. Given the nature of this installation process (and it's variance across multiple operating systems), we will leave this installation process to the user.
+To develop on this cookbook, you must have a sane  >= Ruby 1.9.2 environment. Given the nature of this installation process (and it's variance across multiple operating systems), we will leave this installation process to the user.
 
 You must also have `bundler` installed:
 
