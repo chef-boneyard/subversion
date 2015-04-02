@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe 'subversion::client' do
   context 'on Windows' do
-    let(:chef_run) { ChefSpec::ChefRunner.new(platform: 'windows', version: '2008R2').converge(described_recipe) }
+    let(:chef_run) { ChefSpec::SoloRunner.new(platform: 'windows', version: '2008R2').converge(described_recipe) }
 
     it 'installs Subversion' do
       expect(chef_run).to install_windows_package('Subversion')
@@ -14,7 +14,7 @@ describe 'subversion::client' do
   end
 
   context 'on Ubuntu' do
-    let(:chef_run) { ChefSpec::ChefRunner.new(platform: 'ubuntu', version: '12.04').converge(described_recipe) }
+    let(:chef_run) { ChefSpec::SoloRunner.new(platform: 'ubuntu', version: '12.04').converge(described_recipe) }
 
     it 'installs subversion' do
       expect(chef_run).to install_package('subversion')
