@@ -1,4 +1,8 @@
-site 'https://supermarket.chef.io'
+#!/usr/bin/env ruby
+# ^syntax detection
+
+source 'https://supermarket.chef.io'
+
 metadata
 
 group :integration do
