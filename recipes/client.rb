@@ -20,9 +20,9 @@
 case node['platform']
 when 'windows'
   windows_package 'Subversion' do
-    source   node['subversion']['msi_source']
+    source node['subversion']['msi_source']
     checksum node['subversion']['msi_checksum']
-    action   :install
+    action :install
   end
 
   windows_path 'C:\Program Files (x86)\Subversion\bin' do
@@ -34,8 +34,8 @@ else
   end
 
   extra_packages = value_for_platform_family(
-    'debian' => %w[subversion-tools libsvn-perl],
-    %w[rhel fedora suse] => %w[subversion-devel subversion-perl]
+    'debian' => %w(subversion-tools libsvn-perl),
+    %w(rhel fedora suse) => %w(subversion-devel subversion-perl)
   )
 
   extra_packages.each do |name|
