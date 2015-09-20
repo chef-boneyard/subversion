@@ -1,7 +1,11 @@
 require 'spec_helper'
 
 describe 'subversion::server' do
-  let(:chef_run) { ChefSpec::ChefRunner.new(platform: 'ubuntu', version: '12.04').converge(described_recipe) }
+  let(:chef_run) { ChefSpec::SoloRunner.new(platform: 'ubuntu', version: '12.04').converge(described_recipe) }
+
+  before do
+    stub_command('/usr/sbin/apache2 -t').and_return(true)
+  end
 
   it 'includes mod_dav_svn' do
     expect(chef_run).to include_recipe('apache2::mod_dav_svn')
@@ -17,6 +21,6 @@ describe 'subversion::server' do
     expect(directory.user).to eq('www-data')
     expect(directory.group).to eq('www-data')
     expect(directory.mode).to eq('0755')
-    expect(directory.recursive).to be_true
+    expect(directory.recursive).to be_truthy
   end
 end
