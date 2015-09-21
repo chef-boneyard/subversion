@@ -2,6 +2,20 @@ subversion Cookbook CHANGELOG
 =============================
 This file is used to list changes made in each version of the subversion cookbook.
 
+v1.3.1 (9-21-2015)
+------
+- Changed the apache2 cookbook dependency from '~> 2.0.0' to '>= 2.0.0' so that the 3.X release can be used
+- Updated Travis config to test on modern Ruby releases and use the container infrastructure for faster tests
+- Updated Berskfile to the 3.X format
+- Updated Chefspecs to the 4.X format
+- Added source_url and issues_url metadata for Supermarket
+- Added contributing, testing, and maintainers documentation
+- Updated all development dependencies in the Gemfile to the latest
+- Added a Rakefile for simplified testing
+- Added Oracle Linux and Amazon Linux to the Readme and metadata
+- Added CentOS to the Kitchen CI config
+- Added Chef standard .gitignore and chefignore files
+
 v1.3.0
 ------
 - Updating test harness
