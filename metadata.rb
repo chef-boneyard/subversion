@@ -4,7 +4,7 @@ maintainer_email 'cookbooks@chef.io'
 license 'Apache 2.0'
 description 'Installs subversion'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version '1.3.1'
+version '1.4.0'
 
 %w(fedora ubuntu debian redhat centos suse scientific oracle amazon windows).each do |os|
   supports os
