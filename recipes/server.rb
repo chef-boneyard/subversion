@@ -48,7 +48,6 @@ package 'apache2-utils' if platform_family?('debian', 'suse') && node['apache'][
 execute 'create htpasswd file' do
   command "htpasswd -scb #{node['subversion']['repo_dir']}/htpasswd #{node['subversion']['user']} #{node['subversion']['password']}"
   creates "#{node['subversion']['repo_dir']}/htpasswd"
-  not_if File.exist?("#{node['subversion']['repo_dir']}/htpasswd")
 end
 
 execute 'update htpasswd file' do
