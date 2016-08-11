@@ -25,11 +25,13 @@ env:
   - INSTANCE=client-ubuntu-1604
   - INSTANCE=client-centos-6
   - INSTANCE=client-centos-7
+  - INSTANCE=client-fedora-latest
   - INSTANCE=server-ubuntu-1204
   - INSTANCE=server-ubuntu-1404
   - INSTANCE=server-ubuntu-1604
   - INSTANCE=server-centos-6
   - INSTANCE=server-centos-7
+  - INSTANCE=server-fedora-latest
 
   fast_finish: true
 
