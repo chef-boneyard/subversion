@@ -3,7 +3,7 @@
 # Attributes:: server
 #
 # Copyright 2009, Daniel DeLeo
-# Copyright 2013, Chef
+# Copyright 2013-2016, Chef Software, Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -26,5 +26,5 @@ default['subversion']['password'] = 'subversion'
 default['subversion']['list_parent_path'] = 'off'
 
 # For Windows
-default['subversion']['msi_source'] = 'http://downloads.sourceforge.net/project/win32svn/1.7.0/Setup-Subversion-1.7.0.msi'
-default['subversion']['msi_checksum'] = '2ee93a3a2c1f9b720917263295466f92cac6058c6cd8af65592186235cf0ed71'
+default['subversion']['msi_source'] = 'http://downloads.sourceforge.net/project/win32svn/1.8.16/Setup-Subversion-1.8.16.msi'
+default['subversion']['msi_checksum'] = 'af798ce1ae635ebcfffef4b4f56a8a7f49e489091eed51a79b37abffc8c987a6'
