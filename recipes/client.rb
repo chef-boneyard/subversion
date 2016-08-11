@@ -28,6 +28,10 @@ when 'windows'
   windows_path 'C:\Program Files (x86)\Subversion\bin' do
     action :add
   end
+
+  unless ENV['PATH'].include? 'C:\Program Files (x86)\Subversion\bin'
+    ENV['PATH'] = ENV['PATH'] + ';C:\Program Files (x86)\Subversion\bin'
+  end
 else
   package 'subversion' do
     action :install
