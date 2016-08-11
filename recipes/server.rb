@@ -53,3 +53,10 @@ end
 execute 'update htpasswd file' do
   command "htpasswd -sb #{node['subversion']['repo_dir']}/htpasswd #{node['subversion']['user']} #{node['subversion']['password']}"
 end
+
+cookbook_file "svn_access" do
+  path "#{node['subversion']['repo_dir']}/svn_access"
+  action :create_if_missing
+  owner node['apache']['user']
+  group node['apache']['user']
+end
