@@ -31,7 +31,7 @@ env:
   - INSTANCE=server-ubuntu-1604
   - INSTANCE=server-centos-6
   - INSTANCE=server-centos-7
-  - INSTANCE=server-fedora-latest
+  #- INSTANCE=server-fedora-latest # Disabled due to apache2 cookbook being broken on fedora
 
 before_script:
   - sudo iptables -L DOCKER || ( echo "DOCKER iptables chain missing" ; sudo iptables -N DOCKER )
