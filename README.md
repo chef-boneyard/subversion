@@ -1,62 +1,64 @@
-subversion Cookbook
-===================
-[![Build Status](https://travis-ci.org/chef-cookbooks/subversion.svg?branch=master)](http://travis-ci.org/chef-cookbooks/subversion)
-[![Cookbook Version](https://img.shields.io/cookbook/v/subversion.svg)](https://supermarket.chef.io/cookbooks/subversion)
+# subversion Cookbook
+
+[![Build Status](https://travis-ci.org/chef-cookbooks/subversion.svg?branch=master)](http://travis-ci.org/chef-cookbooks/subversion) [![Cookbook Version](https://img.shields.io/cookbook/v/subversion.svg)](https://supermarket.chef.io/cookbooks/subversion)
 
 Installs subversion for clients or sets up a server under Apache HTTPD.
 
+## Requirements
 
-Requirements
-------------
-#### Platforms
+### Platforms
+
 - Debian/Ubuntu
 - RHEL/CentOS/Scientific/Amazon/Oracle
 - Fedora
 - Windows
 
-#### Chef
-- Chef 11+
+### Chef
 
-#### Cookbooks
+- Chef 12+
+
+### Cookbooks
+
 - apache2
 - windows
 
+## Attributes
 
-Attributes
-----------
 See `attributes/default.rb` for default values. The attributes are used in the server recipe.
 
-* `node['subversion']['repo_dir']` - filesystem location of the repository to serve.
-* `node['subversion']['repo_name']` - name of the repository to serve up.
-* `node['subversion']['server_name']` - server name used in the svn vhost.
-* `node['subversion']['user']` - user to log into the svn vhost.
-* `node['subversion']['password']` - htpasswd for the subversion user in the server recipe. This should be overridden as the default is not secure.
-* `node['subversion']['list_parent_path']` - a choice of "on" or "off".  When set to "on" the list of repositories in the `node['subversion']['repo_dir']` will be indexed at http://<server_name>/svn.  Default is "off"
+- `node['subversion']['repo_dir']` - filesystem location of the repository to serve.
+- `node['subversion']['repo_name']` - name of the repository to serve up.
+- `node['subversion']['server_name']` - server name used in the svn vhost.
+- `node['subversion']['user']` - user to log into the svn vhost.
+- `node['subversion']['password']` - htpasswd for the subversion user in the server recipe. This should be overridden as the default is not secure.
+- `node['subversion']['list_parent_path']` - a choice of "on" or "off". When set to "on" the list of repositories in the `node['subversion']['repo_dir']` will be indexed at http://
 
+  <server_name>/svn.  Default is "off"</server_name>
 
-Recipes
--------
+## Recipes
+
 ### default
+
 Includes `recipe[subversion::client]`.
 
 ### client
+
 Installs `subversion` packages.
 
 ### server
+
 Sets up an SVN repository server with `recipe[apache2::mod_dav_svn]`. This will use the `web_app` definition from the apache cookbook to drop off the template, and uses the attributes for configuration.
 
+## Usage
 
-Usage
------
 On nodes where `subversion` should be installed such as application servers that will check out a repository, use `recipe[subversion]`. If you would like a subversion server, use `recipe[subversion::server]`. You should override `node['subversion']['password']` in the role that applies the server recipe.
 
+## License & Authors
 
-License & Authors
------------------
-
-**Author:** Cookbook Engineering Team (<cookbooks@chef.io>)
+**Author:** Cookbook Engineering Team ([cookbooks@chef.io](mailto:cookbooks@chef.io))
 
 **Copyright:** 2008-2016, Chef Software, Inc.
+
 ```
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
