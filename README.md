@@ -15,7 +15,7 @@ Installs subversion for clients or sets up a server under Apache HTTPD.
 
 ### Chef
 
-- Chef 12+
+- Chef 12.1+
 
 ### Cookbooks
 
