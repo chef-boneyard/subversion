@@ -2,6 +2,9 @@ subversion Cookbook CHANGELOG
 =============================
 This file is used to list changes made in each version of the subversion cookbook.
 
+## 2.1.0 (2016-09-16)
+- Require Chef 12.1+
+
 ## 2.0.0 (2016-09-03)
 - Testing updates
 - Require Chef 12 or later
