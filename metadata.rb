@@ -11,7 +11,7 @@ version '2.1.0'
 end
 
 depends 'apache2', '>= 2.0.0'
-depends 'windows', '~> 1.44'
+depends 'windows', '>= 1.44'
 
 recipe 'subversion::default', 'Includes the client recipe.'
 recipe 'subversion::client', 'Subversion Client installs subversion and some extra svn libs'
