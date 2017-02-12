@@ -19,5 +19,4 @@ recipe 'subversion::server', 'Subversion Server (Apache2 mod_dav_svn)'
 
 source_url 'https://github.com/chef-cookbooks/subversion'
 issues_url 'https://github.com/chef-cookbooks/subversion/issues'
-
-chef_version '>= 12.1'
+chef_version '>= 12.1' if respond_to?(:chef_version)
