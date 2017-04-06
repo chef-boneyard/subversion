@@ -2,8 +2,8 @@
 # Cookbook:: subversion
 # Attributes:: server
 #
-# Copyright:: 2009-2016, Daniel DeLeo
-# Copyright:: 2013-2016, Chef Software, Inc.
+# Copyright:: 2009-2017, Daniel DeLeo
+# Copyright:: 2013-2017, Chef Software, Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
