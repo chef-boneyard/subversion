@@ -14,7 +14,7 @@ describe 'subversion::client' do
   end
 
   context 'on Ubuntu' do
-    let(:chef_run) { ChefSpec::SoloRunner.new(platform: 'ubuntu', version: '12.04').converge(described_recipe) }
+    let(:chef_run) { ChefSpec::SoloRunner.new(platform: 'ubuntu', version: '16.04').converge(described_recipe) }
 
     it 'installs subversion' do
       expect(chef_run).to install_package('subversion')
