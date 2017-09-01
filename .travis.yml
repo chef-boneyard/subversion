@@ -19,7 +19,7 @@ services: docker
 
 env:
   matrix:
-  - INSTANCE=client-amazonlinux
+    #  - INSTANCE=client-amazonlinux
   - INSTANCE=client-centos-6
   - INSTANCE=client-centos-7
   - INSTANCE=client-debian-8
@@ -27,8 +27,7 @@ env:
   - INSTANCE=client-fedora-latest
   - INSTANCE=client-ubuntu-1404
   - INSTANCE=client-ubuntu-1604
-
-  - INSTANCE=server-amazonlinux
+    #- INSTANCE=server-amazonlinux
   - INSTANCE=server-centos-6
   - INSTANCE=server-centos-7
   - INSTANCE=server-debian-8
