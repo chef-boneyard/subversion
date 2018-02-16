@@ -2,6 +2,11 @@ subversion Cookbook CHANGELOG
 =============================
 This file is used to list changes made in each version of the subversion cookbook.
 
+## 2.1.3 (2018-02-16)
+
+- Properly notify the apache2 restart
+- Testing updates
+
 ## 2.1.2 (2017-08-07)
 
 - Add Amazon as a platform in client.rb recipe
