@@ -73,11 +73,3 @@ platforms:
   driver:
     image: dokken/opensuse-leap
     pid_one_command: /bin/systemd
-
-suites:
-  - name: client
-    run_list:
-      - recipe[subversion::client]
-  - name: server
-    run_list:
-      - recipe[subversion::server]
