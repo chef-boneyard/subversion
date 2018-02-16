@@ -33,7 +33,7 @@ end
 web_app 'subversion' do
   template 'subversion.conf.erb'
   server_name "#{node['subversion']['server_name']}.#{node['domain']}"
-  notifies 'restart[apache2]'
+  notifies :restart, 'service[apache2]'
 end
 
 execute 'svnadmin create repo' do
