@@ -2,6 +2,10 @@ subversion Cookbook CHANGELOG
 =============================
 This file is used to list changes made in each version of the subversion cookbook.
 
+## 3.0.0 (2018-07-24)
+
+- Remove dependency on windows cookbook and require Chef 13.4+
+
 ## 2.1.3 (2018-02-16)
 
 - Properly notify the apache2 restart
