@@ -15,12 +15,11 @@ Installs subversion for clients or sets up a server under Apache HTTPD.
 
 ### Chef
 
-- Chef 12.1+
+- Chef 13.4+
 
 ### Cookbooks
 
 - apache2
-- windows
 
 ## Attributes
 

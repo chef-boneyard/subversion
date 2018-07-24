@@ -11,7 +11,6 @@ version '2.1.3'
 end
 
 depends 'apache2', '>= 2.0.0'
-depends 'windows', '>= 1.44'
 
 recipe 'subversion::default', 'Includes the client recipe.'
 recipe 'subversion::client', 'Subversion Client installs subversion and some extra svn libs'
@@ -19,4 +18,4 @@ recipe 'subversion::server', 'Subversion Server (Apache2 mod_dav_svn)'
 
 source_url 'https://github.com/chef-cookbooks/subversion'
 issues_url 'https://github.com/chef-cookbooks/subversion/issues'
-chef_version '>= 12.1' if respond_to?(:chef_version)
+chef_version '>= 13.4'
