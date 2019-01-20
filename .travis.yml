@@ -25,7 +25,6 @@ env:
   - INSTANCE=client-debian-8
   - INSTANCE=client-debian-9
   - INSTANCE=client-fedora-latest
-  - INSTANCE=client-ubuntu-1404
   - INSTANCE=client-ubuntu-1604
     #- INSTANCE=server-amazonlinux
   - INSTANCE=server-centos-6
@@ -33,7 +32,6 @@ env:
   - INSTANCE=server-debian-8
   - INSTANCE=server-debian-9
   #- INSTANCE=server-fedora-latest # Disabled due to apache2 cookbook being broken on fedora
-  - INSTANCE=server-ubuntu-1404
   - INSTANCE=server-ubuntu-1604
 
 before_script:
