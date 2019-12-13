@@ -17,8 +17,7 @@
 # limitations under the License.
 #
 
-case node['platform']
-when 'windows'
+if platform?('windows')
   windows_package 'Subversion' do
     source node['subversion']['msi_source']
     checksum node['subversion']['msi_checksum']
